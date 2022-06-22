@@ -1,7 +1,7 @@
-let userNumber;
 const btnGenerator = document.getElementById('btn-generator');
 const btnWinner = document.getElementById('btn-winner');
 const computerRandomOutput = document.getElementById('computer-random-number');
+let userNumber;
 let computerNumber = 0;
 let winner;
 let sumNumbers = 0;

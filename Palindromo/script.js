@@ -14,7 +14,7 @@ function checkIfPalindrome(word){
     let result = true;
     console.log(word)
     let i= 0;
-    while( (i < word.length) || (result != false)){
+    while( (i < word.length) && (result != false)){
         if(word[i] !== word[word.length - 1 - i ])
         {
             result = false;
