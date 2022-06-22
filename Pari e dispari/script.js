@@ -1,10 +1,12 @@
 const btnGenerator = document.getElementById('btn-generator');
 const btnWinner = document.getElementById('btn-winner');
 const computerRandomOutput = document.getElementById('computer-random-number');
+const finalResultContainer = document.getElementById('final-result-container')
 let userNumber;
 let computerNumber = 0;
 let winner;
 let sumNumbers = 0;
+let winnerMessage;
 
 btnGenerator.addEventListener('click',function(){
     computerNumber = randomGen(1,5);
@@ -29,16 +31,16 @@ btnWinner.addEventListener('click',function(){
             sumNumbers = userNumber + computerNumber;
             winner = checkSumEven(sumNumbers);
             if(winner == true && selectValue == 'even'){
-                console.log('Vince l\' utente');
+                winnerMessage = 'L\'utente vince';
             }else if(winner == false && selectValue == 'odd')
             {
-                console.log('Vince l\' utente');
+                winnerMessage = 'L\'utente vince';
             }
             else{
-                console.log('Vince il computer')
+                winnerMessage = 'Il computer vince';
             }
+            finalResultContainer.innerHTML = winnerMessage;
         }
-       
     }
 })
 
