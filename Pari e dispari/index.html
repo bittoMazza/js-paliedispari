@@ -15,23 +15,24 @@
 <body>
     <div class="container">
         <div class="row pt-5">
-            <div class="d-flex flex-column">
-                <div class="col-6">
+            <div class="d-flex flex-column gap-4">
+                <div>
                     <label for=""> SCEGLIERE : PARI O DISPARI ? </label>
                     <select name="" id="select-even-odd">
                         <option value="even" id=""> Pari </option>
                         <option value="odd" id=""> Dispari </option>
                     </select>
                 </div>
-                <div class="col-6">
+                <div>
                     <label for=""> INSERIRE UN NUMERO DA 1 A 5 </label>
-                    <input type="text" name="" id="user-number">
+                    <input type="text" name="" id="user-number" placeholder="Inserire numero">
                 </div>            
+                <div class="pt-2">
+                    <button id="btn-generator">GENERA NUMERO RANDOM PER IL COMPUTER</button>
+                    <button id="btn-winner">CLICCA PER SCOPRIRE CHI HA VINTO</button>
+                </div>
             </div>
-            <div class="pt-2">
-                <button id="btn-generator">GENERA NUMERO RANDOM PER IL COMPUTER</button>
-                <button id="btn-winner">CLICCA PER SCOPRIRE CHI HA VINTO</button>
-            </div>
+           
         </div>
     </div>
     <script src="./script.js"></script>
