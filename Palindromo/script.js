@@ -13,9 +13,7 @@ if(finalResult == true){
 function checkIfPalindrome(word){
     console.log(word)
     let i= 0;
-    // IL CONTROLLO ARRIVA FINO A META PAROLA PERCHE LE PAROLE PALINDROME HANNO UNA META 
-    // UGUALE ALL'ALTRA MA CON LE LETTERE INVERSE
-    while( i < (word.length / 2)){
+    while( i < (word.length)){
         // PARAGONIAMO LA LETTERA ALLA POSIZIONE I CON QUELLA A FINE PAROLA - I
         // IN MODO DA AVVICINARCI  A META PAROLA DA ENTRAMBE LE PARTI
         if(word[i] == word[word.length - 1 -i])
