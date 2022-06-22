@@ -1,7 +1,7 @@
 const userWord = prompt('Inserire una parola')
-let finalResult;
-finalResult = checkIfPalindrome(userWord);
-if(finalResult == true){
+// Potremmo creare una variabile a cui assegnare il valore "result"
+// restituito dalla funzione 
+if(checkIfPalindrome(userWord) == true){
     console.log('La parola è palindroma')
 }else{
     console.log('La parola non è palindroma')
