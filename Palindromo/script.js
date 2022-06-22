@@ -11,20 +11,16 @@ if(checkIfPalindrome(userWord) == true){
 
 
 function checkIfPalindrome(word){
+    let result = true;
     console.log(word)
     let i= 0;
-    while( i < (word.length)){
-        // PARAGONIAMO LA LETTERA ALLA POSIZIONE I CON QUELLA A FINE PAROLA - I
-        // IN MODO DA AVVICINARCI  A META PAROLA DA ENTRAMBE LE PARTI
-        if(word[i] == word[word.length - 1 -i])
+    while( (i < word.length) || (result != false)){
+        if(word[i] !== word[word.length - 1 - i ])
         {
-            result = true;
-            i++
+            result = false;
         }
-        else{
-            result = false
-            return result;
-        }
+        i++;
+        
     }
     return result;
 }
