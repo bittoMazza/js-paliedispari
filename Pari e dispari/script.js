@@ -1,13 +1,16 @@
 let userNumber;
-const selectValue = document.getElementById('select-even-odd').value;
 const btnGenerator = document.getElementById('btn-generator');
 const btnWinner = document.getElementById('btn-winner');
+const computerRandomOutput = document.getElementById('computer-random-number');
 let computerNumber = 0;
 let winner;
 let sumNumbers = 0;
 
 btnGenerator.addEventListener('click',function(){
     computerNumber = randomGen(1,5);
+    alert('HAI GENERATO UN NUMERO RANDOMICO,CLICCA SUL TASTO PER VERIFICARE CHI HA VINTO E SCOPRIRAI QUAL\'ERA IL NUMERO RANDOMICO')
+    computerRandomOutput.classList.add('invisible');
+    computerRandomOutput.innerHTML = computerNumber;
     console.log(computerNumber)
 })
 
@@ -16,17 +19,26 @@ btnWinner.addEventListener('click',function(){
         alert('Cliccare il tasto per generare un numero randomico')
     }else{
         userNumber = parseInt(document.getElementById('user-number').value);
-        sumNumbers = userNumber + computerNumber;
-        winner = checkSumEven(sumNumbers);
-        if(winner == true && selectValue == 'even'){
-            console.log('Vince l\' utente');
-        }else if(winner == false && selectValue == 'odd')
+        if(isNaN(userNumber) || (userNumber < 1 || userNumber > 5))
         {
-            console.log('Vince l\' utente');
+         alert('Valore del numero inserito non corretto,inserire un numero da 1 a 5')   
         }
         else{
-            console.log('Vince il computer')
+            const selectValue = document.getElementById('select-even-odd').value;
+            computerRandomOutput.classList.remove('invisible');
+            sumNumbers = userNumber + computerNumber;
+            winner = checkSumEven(sumNumbers);
+            if(winner == true && selectValue == 'even'){
+                console.log('Vince l\' utente');
+            }else if(winner == false && selectValue == 'odd')
+            {
+                console.log('Vince l\' utente');
+            }
+            else{
+                console.log('Vince il computer')
+            }
         }
+       
     }
 })
 
